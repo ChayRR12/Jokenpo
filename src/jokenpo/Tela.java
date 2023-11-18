@@ -9,12 +9,10 @@ package jokenpo;
  *
  * @author 66211020764
  */
-public class tela extends javax.swing.JFrame {
+public class Tela extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
-    public tela() {
+
+    public Tela() {
         initComponents();
     }
 
@@ -31,8 +29,8 @@ public class tela extends javax.swing.JFrame {
         jbPapel = new javax.swing.JButton();
         jbPedra = new javax.swing.JButton();
         jbTesoura = new javax.swing.JButton();
-        txtPcEscolha = new javax.swing.JLabel();
         txtJokenpo = new javax.swing.JLabel();
+        txtEscolhapc = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,16 +57,20 @@ public class tela extends javax.swing.JFrame {
             }
         });
 
-        txtPcEscolha.setForeground(new java.awt.Color(255, 255, 255));
-
         txtJokenpo.setFont(new java.awt.Font("Yu Gothic Medium", 0, 18)); // NOI18N
         txtJokenpo.setText("Jokenpo");
+
+        txtEscolhapc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEscolhapcActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addComponent(jbPedra)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
@@ -79,11 +81,11 @@ public class tela extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(240, 240, 240)
-                        .addComponent(txtPcEscolha, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(274, 274, 274)
-                        .addComponent(txtJokenpo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtJokenpo, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addComponent(txtEscolhapc, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -91,9 +93,9 @@ public class tela extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addComponent(txtJokenpo, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
-                .addComponent(txtPcEscolha, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(135, 135, 135)
+                .addGap(70, 70, 70)
+                .addComponent(txtEscolhapc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbPapel)
                     .addComponent(jbPedra)
@@ -127,6 +129,10 @@ public class tela extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbTesouraActionPerformed
 
+    private void txtEscolhapcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEscolhapcActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEscolhapcActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -144,20 +150,20 @@ public class tela extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tela.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewJFrame().setVisible(true);
+                new Tela().setVisible(true);
             }
         });
     }
@@ -167,7 +173,7 @@ public class tela extends javax.swing.JFrame {
     private javax.swing.JButton jbPapel;
     private javax.swing.JButton jbPedra;
     private javax.swing.JButton jbTesoura;
+    private javax.swing.JTextField txtEscolhapc;
     private javax.swing.JLabel txtJokenpo;
-    private javax.swing.JLabel txtPcEscolha;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,6 +5,8 @@
  */
 package jokenpo;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author 66211020764
@@ -15,7 +17,10 @@ public class Jokenpo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        setTitle("");
+        Tela t = new Tela();
+        t.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        t.setSize(640, 530);
+        t.setVisible(true);
     }
     
 }

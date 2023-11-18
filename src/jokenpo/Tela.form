@@ -43,7 +43,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                   <Component id="jbPedra" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="136" max="32767" attributes="0"/>
@@ -54,13 +54,13 @@
               </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
-                          <Component id="txtPcEscolha" min="-2" pref="133" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="274" max="-2" attributes="0"/>
                           <Component id="txtJokenpo" min="-2" pref="82" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
+                          <Component id="txtEscolhapc" min="-2" pref="176" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -72,9 +72,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                   <Component id="txtJokenpo" min="-2" pref="57" max="-2" attributes="0"/>
-                  <EmptySpace pref="78" max="32767" attributes="0"/>
-                  <Component id="txtPcEscolha" min="-2" pref="48" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                  <Component id="txtEscolhapc" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="171" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jbPapel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jbPedra" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -110,13 +110,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbTesouraActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="txtPcEscolha">
-          <Properties>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="txtJokenpo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -124,6 +117,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Jokenpo"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtEscolhapc">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEscolhapcActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
